@@ -19,7 +19,11 @@ $ListaCompetencias = $CrudCompetencia->ListarCompetencias();
      <h1 align="center">Listado de Competencias</h1>
      <table align="center" border="1">
           <thead>
-               <tr><th>Codigo Competencia</th><th>Nombre Competencia</th></tr>
+               <tr>
+               <th>Codigo Competencia</th>
+               <th>Nombre Competencia</th>
+               <th>Acciones</th>
+               </tr>
           </thead>
 
           <tbody>
@@ -29,6 +33,10 @@ $ListaCompetencias = $CrudCompetencia->ListarCompetencias();
                     <tr>
                     <td><?php echo $Competencia->getCodigoCompetencia();?></td>
                     <td><?php echo $Competencia->getNombreCompetencia();?></td>
+                    <td>
+                    <a href="EditarCompetencias.php?CodigoCompetencia=<?php echo $Competencia->getCodigoCompetencia();?>">Editar</a> 
+                    <a href="../Controlador/ControladorCompetencia.php?CodigoCompetencia=<?php echo $Competencia->getCodigoCompetencia();?>&Accion=EliminarCompetencia">Eliminar</a> 
+                    </td>
 
                     <?php
                }

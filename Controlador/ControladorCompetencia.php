@@ -15,7 +15,10 @@ if (isset($_POST["Registrar"]))// si lapeticion se registra
      $CrudCompetencia::InsertarCompetencia($Competencia);// llamar al metodo para  indertar
 
 }
-
+elseif ($_GET['Accion'] == "EliminarCompetencia") {
+     echo "En Desarrollo";
+     echo $_GET["CodigoCompetencia"];
+}
 
 
 ?>
