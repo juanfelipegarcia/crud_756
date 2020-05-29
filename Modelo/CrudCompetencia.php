@@ -45,6 +45,56 @@ class CrudCompetencia{
           return $ListaCompetencias;
      }
 
+     public function ObtenerCompetencia($CodigoCompetencia){//Codigo para obtener una competencia
+          $Db = Db::Conectar();
+          $Sql = $Db->prepare('SELECT * FROM competencia WHERE CodigoCompetencia=:CodigoCompetencia');
+          $Sql->bindValue('CodigoCompetencia', $CodigoCompetencia);
+          $MyCompetencia = new Competencia();
+
+          try {
+               $Sql->execute();//ejecutar el insert
+               $Competencia = $Sql->fetch();
+               $MyCompetencia->setCodigoCompetencia($Competencia['CodigoCompetencia']);
+               $MyCompetencia->setNombreCompetencia($Competencia['NombreCompetencia']);
+
+          } catch (Exception $e) {
+               echo $e->getMessage();//Mostrar errores en la modificacion
+               die();
+          }
+          return $MyCompetencia;
+     }
+
+     public function ModificarCompetencia($Competencia){
+          $Db = Db::Conectar();// conectar a la base de Datos
+          //definir la modificacion a realizar
+          $Sql = $Db->prepare('UPDATE competencia SET NombreCompetencia=:NombreCompetencia WHERE CodigoCompetencia=:CodigoCompetencia');
+          $Sql->bindValue('CodigoCompetencia', $Competencia->getCodigoCompetencia());
+          $Sql->bindValue('NombreCompetencia', $Competencia->getNombreCompetencia());
+          try {
+               $Sql->execute();//ejecutar el insert
+               Echo " Modificacion exitosa";
+          } catch (Exception $e) {
+               echo $e->getMessage();//Mostrar errores en la insercion
+               die();
+          }
+
+     }
+     public function EliminarCompetencia($CodigoCompetencia){
+          $Db = Db::Conectar();// conectar a la base de Datos
+          //definir la modificacion a realizar
+          $Sql = $Db->prepare('DELETE FROM competencia WHERE CodigoCompetencia=:CodigoCompetencia');
+          $Sql->bindValue('CodigoCompetencia', $CodigoCompetencia);
+          
+          try {
+               $Sql->execute();//ejecutar el insert
+               Echo "Eliminacion exitosa";
+          } catch (Exception $e) {
+               echo $e->getMessage();//Mostrar errores en la insercion
+               die();
+          }
+
+     }
+
 }
 
 // $Crud = new CrudCompetencia();
