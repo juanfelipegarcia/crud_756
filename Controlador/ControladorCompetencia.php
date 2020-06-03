@@ -1,4 +1,5 @@
 <?php
+require_once('../Conexion.php');
 require_once('../Modelo/Competencia.php');// vincular la clase
 require_once('../Modelo/CrudCompetencia.php');
 

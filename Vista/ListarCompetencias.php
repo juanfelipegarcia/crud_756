@@ -1,4 +1,5 @@
 <?php
+require_once('../Conexion.php');
 require_once('../Modelo/Competencia.php');
 require_once('../Modelo/CrudCompetencia.php');
 
@@ -17,6 +18,7 @@ $ListaCompetencias = $CrudCompetencia->ListarCompetencias();
 </head>
 <body>
      <h1 align="center">Listado de Competencias</h1>
+     <a href="../TCPDF/examples/reportepdfCompetencias.php">Reporte Pdf</a>
      <table align="center" border="1">
           <thead>
                <tr>
