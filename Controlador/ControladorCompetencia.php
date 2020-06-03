@@ -7,7 +7,7 @@ $CrudCompetencia = new CrudCompetencia();
 
 if (isset($_POST["Registrar"]))// si lapeticion se registra
 {
-     echo "Registrar ";
+
      $Competencia->setCodigoCompetencia($_POST["CodigoCompetencia"]);//instanciar el atributo
      $Competencia->setNombreCompetencia($_POST["NombreCompetencia"]);// instanciar  el atributo
      echo $Competencia->getNombreCompetencia();// verifica la instancia

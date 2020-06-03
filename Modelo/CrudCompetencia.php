@@ -97,7 +97,5 @@ class CrudCompetencia{
 
 }
 
-// $Crud = new CrudCompetencia();
-// $Crud->ListarCompetencias();
 
 ?>
