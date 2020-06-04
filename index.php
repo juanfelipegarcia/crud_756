@@ -7,27 +7,20 @@
      <link rel="stylesheet" href="css/estilosIndex.css"></link>
 </head>
 <body>
-     <h1 align="center">Administar Competencias</h1>
+     <h1 align="center">Ingreso</h1>
+    
+     <form action="Usuario/Controlador/ControladorUsuario.php" method="POST" align="center">
+          <div class="form-group">
+               <label for="">Usuario</label>
+               <input type="text" class="form-control" id="NombreUsuario" name="NombreUsuario" >
+          </div>
+          <div class="form-group">
+               <label for="">Password</label>
+               <input type="password" class="form-control" id="Contrasena" name="Contrasena">
+          </div>
+        
+          <button type="submit" name="Acceder" id="Acceder">Ingresar</button>
+     </form>
 
-     <!-- <table align="center" border="1">
-          <thead>
-               <tr>
-               <td><a href="Vista/IngresarCompetencia.php">Ingresar</a></td>
-               <td><a href="Vista/ListarCompetencias.php">Listar</a></td>
-               </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
-     </table> -->
-
-     <section class="section-1" align="center">
-               <div class="section-1_card" align="center">
-                    <a href="Vista/IngresarCompetencia.php">Ingresar</a>
-               </div>
-               <div class="section-1_card" align="center">
-                    <a href="Vista/ListarCompetencias.php">Listar</a>
-               </div>
-     </section>
 </body>
 </html>
