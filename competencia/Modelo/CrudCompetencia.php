@@ -16,7 +16,14 @@ class CrudCompetencia{
           $Insert->bindValue('NombreCompetencia', $Competencia->getNombreCompetencia());
           try {
                $Insert->execute();//ejecutar el insert
-               Echo " Registro exitoso";
+               //Echo " Registro exitoso";
+               ?>
+               <script>
+          //header("location:../../index.php");
+               alert("Registro exitoso");
+               document.location.href="../Index.php";
+               </script>
+               <?php
           } catch (Exception $e) {
                echo $e->getMessage();//Mostrar errores en la insercion
                die();
@@ -72,7 +79,14 @@ class CrudCompetencia{
           $Sql->bindValue('NombreCompetencia', $Competencia->getNombreCompetencia());
           try {
                $Sql->execute();//ejecutar el insert
-               Echo " Modificacion exitosa";
+               //Echo " Modificacion exitosa";
+               ?>
+               <script>
+               //header("location:../../index.php");
+               alert("Modificacion Exitosa!!");
+               document.location.href="../Vista/ListarCompetencias.php";
+               </script>
+               <?php
           } catch (Exception $e) {
                echo $e->getMessage();//Mostrar errores en la insercion
                die();
@@ -87,7 +101,14 @@ class CrudCompetencia{
           
           try {
                $Sql->execute();//ejecutar el insert
-               Echo "Eliminacion exitosa";
+               //Echo "Eliminacion exitosa";
+               ?>
+               <script>
+               //header("location:../../index.php");
+               alert("Eliminacion exitosa!!");
+               document.location.href="../Vista/ListarCompetencias.php";
+               </script>
+               <?php
           } catch (Exception $e) {
                echo $e->getMessage();//Mostrar errores en la insercion
                die();

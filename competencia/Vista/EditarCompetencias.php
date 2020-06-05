@@ -17,8 +17,8 @@ $Competencia = $CrudCompetencia::ObtenerCompetencia($_GET['CodigoCompetencia']);
      <title>Editar</title>
 </head>
 <body>
-     <h1 aling="center">Competencia</h1>
-     <form action="../Controlador/ControladorCompetencia.php" method="post">
+     <h1 align="center">Competencia</h1>
+     <form align="center" action="../Controlador/ControladorCompetencia.php" method="post">
      Codigo competencia: <input type="text" name="CodigoCompetencia" id="CodigoCompetencia" value="<?php echo $Competencia->getCodigoCompetencia();?>" readonly>
      <br><br>
      Nombre Competencia: <input type="text" name="NombreCompetencia" id="NombreCompetencia" value="<?php echo $Competencia->getNombreCompetencia();?>">
@@ -27,6 +27,11 @@ $Competencia = $CrudCompetencia::ObtenerCompetencia($_GET['CodigoCompetencia']);
      <input type="hidden" name="Modificar" id="Modificar">
      <button type="submit">Modificar</button>
      </form>
+     <br>
+     <div align="center">
+     <button><a href="ListarCompetencias.php">Volver</a></button>
+     </div>
+
 </body>
 </html>
 

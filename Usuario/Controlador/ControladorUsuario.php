@@ -24,15 +24,10 @@ if(isset($_POST["Acceder"])){
      {
           ?>
           <script>
-
           //header("location:../../index.php");
-
           alert("Usuario y/o clave  incorrecta");
           document.location.href="../../Index.php";
-
           </script>
-
-
           <?php
      }
 

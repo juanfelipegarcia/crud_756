@@ -28,8 +28,8 @@
 require_once('tcpdf_include.php');
 
 require_once('../../Conexion.php');
-require_once('../../Modelo/Competencia.php');
-require_once('../../Modelo/CrudCompetencia.php');
+require_once('../../competencia/Modelo/Competencia.php');
+require_once('../../competencia/Modelo/CrudCompetencia.php');
 
 $CrudCompetencia = new CrudCompetencia();
 $ListaCompetencias = $CrudCompetencia->ListarCompetencias();

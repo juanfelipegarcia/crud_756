@@ -18,7 +18,7 @@ if (isset($_POST["Registrar"]))// si lapeticion se registra
 }
 else if (isset($_POST["Modificar"]))// si lapeticion se registra
 {
-     echo "Modificar ";
+     //echo "Modificar ";
      $Competencia->setCodigoCompetencia($_POST["CodigoCompetencia"]);//instanciar el atributo
      $Competencia->setNombreCompetencia($_POST["NombreCompetencia"]);// instanciar  el atributo
      echo $Competencia->getNombreCompetencia();// verifica la instancia

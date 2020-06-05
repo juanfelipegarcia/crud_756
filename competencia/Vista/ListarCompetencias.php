@@ -18,7 +18,11 @@ $ListaCompetencias = $CrudCompetencia->ListarCompetencias();
 </head>
 <body>
      <h1 align="center">Listado de Competencias</h1>
-     <a href="../TCPDF/examples/reportepdfCompetencias.php">Reporte Pdf</a>
+     <br>
+     <div align="center">
+     <button ><a href="../../TCPDF/examples/reportepdfCompetencias.php" target="_blank">Reporte Pdf</a></button>
+     </div>
+     <br>
      <table align="center" border="1">
           <thead>
                <tr>
@@ -27,7 +31,6 @@ $ListaCompetencias = $CrudCompetencia->ListarCompetencias();
                <th>Acciones</th>
                </tr>
           </thead>
-
           <tbody>
           <?php
                foreach ($ListaCompetencias as $Competencia) {
@@ -46,6 +49,10 @@ $ListaCompetencias = $CrudCompetencia->ListarCompetencias();
           </tbody>
      
      </table>
+     <br>
+     <div align="center">
+     <button><a href="../index.php">Volver</a></button>
+     </div>
 </body>
 </html>
 
