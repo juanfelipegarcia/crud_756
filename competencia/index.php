@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if (!(isset($_SESSION["NombreUsuario"]))) {
+ header("location:../Index.php");    
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +18,6 @@
 </head>
 <body>
      <h1 align="center">Administar Competencias</h1>
-
-     <!-- <table align="center" border="1">
-          <thead>
-               <tr>
-               <td><a href="Vista/IngresarCompetencia.php">Ingresar</a></td>
-               <td><a href="Vista/ListarCompetencias.php">Listar</a></td>
-               </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
-     </table> -->
 
      <section class="section-1" align="center">
                <div class="section-1_card" align="center">

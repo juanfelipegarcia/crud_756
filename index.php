@@ -14,11 +14,12 @@
                <label for="">Usuario</label>
                <input type="text" class="form-control" id="NombreUsuario" name="NombreUsuario" >
           </div>
+          <br>
           <div class="form-group">
                <label for="">Password</label>
                <input type="password" class="form-control" id="Contrasena" name="Contrasena">
           </div>
-        
+        <br>
           <button type="submit" name="Acceder" id="Acceder">Ingresar</button>
      </form>
 

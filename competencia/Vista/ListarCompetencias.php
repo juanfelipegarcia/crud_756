@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+
+if (!(isset($_SESSION["NombreUsuario"]))) {
+ header("location:../../Index.php");    
+}
+
+
 require_once('../../Conexion.php');
 require_once('../Modelo/Competencia.php');
 require_once('../Modelo/CrudCompetencia.php');

@@ -17,7 +17,11 @@ if(isset($_POST["Acceder"])){
      $Usuario = $CrudUsuario->ValidarAcceso($Usuario);
      //var_dump($Usuario);
      if($Usuario->getExiste()==1){
-          
+          session_start();//inicializa la seccion.section-1
+          //Definir las variables de seccion a emplear en el aplicativo
+          $_SESSION["NombreUsuario"] = $Usuario->getNombreUsuario();
+          $_SESSION["IdUsuario"] = $Usuario->getIdUsuario();
+          $_SESSION["IdRol"] = $Usuario->getIdRol();
           header("location:../../menu.php");
 
      }else
@@ -30,8 +34,6 @@ if(isset($_POST["Acceder"])){
           </script>
           <?php
      }
-
-
 
 }
 else {
