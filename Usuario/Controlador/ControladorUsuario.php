@@ -1,7 +1,7 @@
 <?php
-require_once"../../Conexion.php";
-require_once"../Modelo/Usuario.php";
-require_once"../Modelo/CrudUsuario.php";
+require_once("../../Conexion.php");
+require_once("../Modelo/Usuario.php");
+require_once("../Modelo/CrudUsuario.php");
 
 $Usuario = new Usuario();
 $CrudUsuario = new CrudUsuario();
@@ -24,7 +24,8 @@ if(isset($_POST["Acceder"])){
           $_SESSION["IdRol"] = $Usuario->getIdRol();
           header("location:../../menu.php");
 
-     }else
+     }
+     else
      {
           ?>
           <script>
@@ -34,10 +35,10 @@ if(isset($_POST["Acceder"])){
           </script>
           <?php
      }
-
 }
-else {
-     header("location:../../index.php");
+else
+{
+header("location:../../index.php");
 }
 
 ?>
