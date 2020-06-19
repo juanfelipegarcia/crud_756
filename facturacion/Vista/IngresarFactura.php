@@ -4,6 +4,15 @@ session_start();
 if (!(isset($_SESSION["NombreUsuario"]))) {
  header("location:../../Index.php");    
 }
+
+require_once('../../Conexion.php');
+require_once('../../Cliente/Modelo/Cliente.php');
+require_once('../../Cliente/Modelo/CrudCliente.php');
+$Cliente = new Cliente();
+$CrudCliente = new CrudCliente();
+$ListaClientes = $CrudCliente->ListarClientes();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +29,13 @@ if (!(isset($_SESSION["NombreUsuario"]))) {
      Cliente:
      <select name="CodigoCliente" id="CodigoCliente">
           <option option="">Seleccione</option>
-          <option value="1206">Tomasa Arias</option>
-          <option value="1111">Jannin Santa</option>
+          <?php
+               foreach ($ListaClientes as $Cliente){
+                    ?>
+                    <option value="<?php echo $Cliente->getIdCliente();?>"><?php echo $Cliente->getIdCliente()." - ".$Cliente->getNombreCliente()." ".$Cliente->getApellidoCliente();?></option>
+                    <?php
+               }
+          ?>
      </select>
      <br>
      Producto:
@@ -78,7 +92,7 @@ if (!(isset($_SESSION["NombreUsuario"]))) {
         $('#ProductosAgregados').val(parseInt($('#ProductosAgregados').val()) + 1);//Incrementar Productos Agregados
         let ConsecutivoProducto = $('#ProductosAgregados').val();
 
-        let htmlTags = '<tr>' +
+        let htmlTags = '<tr id="'+ConsecutivoProducto+'">' +
         '<td>' + NombreProducto + '</td>' +
         '<td>' + '<input type="text" id="CodigoProducto'+ConsecutivoProducto+'" name="CodigoProducto'+ConsecutivoProducto+'" value="'+CodigoProducto+'">'+'</td>' +
         '<td>' + '<input type="text" id="CantidadProducto'+ConsecutivoProducto+'" name="CantidadProducto'+ConsecutivoProducto+'" value="'+CantidadProducto+'">'+'</td>' +
@@ -93,6 +107,8 @@ if (!(isset($_SESSION["NombreUsuario"]))) {
     {
         alert(ConsecutivoProducto);
     }
+
+    
 </script>
 </html>
 

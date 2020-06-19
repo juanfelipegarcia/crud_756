@@ -64,32 +64,4 @@ if (isset($_POST["Registrar"])){// si lapeticion se registra
 
 
 
-// if (isset($_POST["Registrar"]))// si lapeticion se registra
-// {
-
-//      $Competencia->setCodigoCompetencia($_POST["CodigoCompetencia"]);//instanciar el atributo
-//      $Competencia->setNombreCompetencia($_POST["NombreCompetencia"]);// instanciar  el atributo
-//      //echo $Competencia->getNombreCompetencia();// verifica la instancia
-
-//      $CrudFactura::InsertarFactura($Competencia);// llamar al metodo para  indertar
-
-// }
-// else if (isset($_POST["Modificar"]))// si lapeticion se registra
-// {
-//      //echo "Modificar ";
-//      $Competencia->setCodigoCompetencia($_POST["CodigoCompetencia"]);//instanciar el atributo
-//      $Competencia->setNombreCompetencia($_POST["NombreCompetencia"]);// instanciar  el atributo
-//      //echo $Competencia->getNombreCompetencia();// verifica la instancia
-
-//      $CrudFactura::ModificarFactura($Competencia);// llamar al metodo para  Modificar
-
-// }
-
-// else if ($_GET['Accion'] == "EliminarCompetencia") {
-//      // echo "En Desarrollo";
-//      // echo $_GET["CodigoCompetencia"];
-//      $CrudFactura::EliminarFactura($_GET["CodigoCompetencia"]);
-// }
-
-
 ?>
